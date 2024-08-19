@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ShowDateTImeSlot">
+
+    <!-- CalendarView at the top -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textStyle="bold"
+        android:text="Available Time Slots"
+        android:textColor="@color/theme"
+        android:textSize="25sp"
+        />
+    <!-- RecyclerView for Time Slots below the Calendar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTimeSlots"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/offDay"
+        android:visibility="gone"
+        android:text="Today is off No Available Time Slots"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        />
+
+</LinearLayout>
+
+
